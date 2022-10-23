@@ -14,7 +14,7 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   })
 
   const executeArgs: Parameters<Contract['fn']> = ['bar']
-  execute(
+  await execute(
     'Contract',
     { from: accounts.deployer },
     'fn',
