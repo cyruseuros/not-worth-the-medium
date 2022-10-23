@@ -13,7 +13,7 @@ contract Factory {
         logic = _logic;
     }
 
-    function deploy() public {
+    function deploy() external {
         deployerContracts[msg.sender] = logic.clone();
     }
 }
