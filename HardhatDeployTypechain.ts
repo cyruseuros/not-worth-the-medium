@@ -8,7 +8,7 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const accounts = await getNamedAccounts()
 
   const deployArgs: Parameters<Contract__factory['deploy']> = ['foo']
-  await deploy('Store', {
+  await deploy('Contract', {
     from: accounts.deployer,
     args: deployArgs,
   })
